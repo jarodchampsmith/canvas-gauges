@@ -17,26 +17,39 @@
         renderTo: 'canvasPressure',
         width: 300,
         height: 300,
-        title: '',
-        units: 'Leve1213',
         startAngle: 45,
         ticksAngle: 270,
         colorPlate: '#ffffff',
-        colorTitle: '#264653',
+        minValue: 0,
+        maxValue: 100,
+        // units
+        title: '',
+        units: 'Participation \n Level',
+        colorUnits: '#264653',
+        fontUnits: 'Lato, sans-serif',
+        fontUnitsSize: '16',
+        fontUnitsWeight: '700',
+        // neddle
+        needleShadow: false,
+        needleCircleSize: 10,
+        needleStart: 0,
+        needleWidth: 6,
         colorNeedle: '#264653',
         colorNeedleEnd: '#264653',
         colorNeedleCircleOuter: '#264653',
         colorNeedleCircleOuterEnd: '#264653',
         colorNeedleShadowUp: '#264653',
         colorNeedleShadowDown: '#264653',
-        fontTitle: 'Lato, sans-serif',
-        fontTitleSize: '14px',
-        fontTitleWeight: '700',
-        minValue: 0,
-        maxValue: 100,
+        // border
+        borderShadowWidth: 0,
+        borders: false,
+        // value box
+        valueBox: false,
+        // ticks
+        hideAllTicks: true,
         strokeTicks: false,
         majorTicks: [],
-        hideAllTicks: true,
+        // highlights
         highlights: [
           {
             'from': 0,
@@ -54,21 +67,10 @@
             'color': '#4CB944'
           }
         ],
-        //
         highlightsWidth: 25,
         highlightsShadow: true,
         highlightsShadowWidth: 25,
         highlightsShadowAlpha: 0.7,
-        // neddle
-        needleShadow: false,
-        needleCircleSize: 10,
-        needleStart: 0,
-        needleWidth: 6,
-        // border
-        borderShadowWidth: 0,
-        borders: false,
-        // value box
-        valueBox: false,
         listeners: {
             value: function(value) {
                 this.update({ units: parseInt(value, 10) + ' hPa' });
